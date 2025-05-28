@@ -1,0 +1,97 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@font-face {
+    font-family: "inter" ;
+    src: url(../font/Inter-VariableFont_opsz\,wght.ttf);
+
+}
+
+*{
+    margin: 0;
+    font-family: "inter" ;
+}
+header{
+    background-color: tomato;
+}
+.cabecalho nav{
+background-color: rgb(240, 248, 255);
+
+display: flex;
+padding: 5px;
+
+justify-content: space-around ;
+
+height: 70px;
+align-items: center;
+}
+.navegacao h1{
+    font-size: 18px;
+    font-weight:900 ;
+}
+.navegacao>ul{
+    list-style: none;
+    display:flex;
+}
+.navegacao>ul a{
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    padding: 3px;
+}
+.navegacao> u i{
+    font-size: 20px;
+    padding: 5px;
+}
+.link-ativo i{
+    color: #f2f2f2;
+    background-color: black;
+
+    border-radius: 5px;
+    
+}
+.menu-principal>li-a{ 
+    margin: 3px;
+    padding: 5px ;
+}
+.menu-principal>li a:hover{
+    transition: 0.3;
+    background-color: black;
+    color: #f2f2f2;
+    border-radius: 5px;
+}
+.banner{
+    height: 100vh;
+    background-color: black;
+
+}
+.banner>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.produtos{
+    height: 30vh;
+
+}
+    .produtos>h1{
+        padding: 30px;
+        text-align: center;
+        font-size: 30px;
+     
+    }
+    .grid-box{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 300px);
+     
+        gap: 10px;
+    }
+    .box{
+        height: 280px;
+        width: 200px;
+     
+        background-color:aquamarine;
+        border-radius: 15px;
+     
+        text-align: center;
+        align-content: center;
+    }
