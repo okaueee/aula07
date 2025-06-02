@@ -1,97 +1,135 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
 @font-face {
-    font-family: "inter" ;
+    font-family: "inter";
     src: url(../font/Inter-VariableFont_opsz\,wght.ttf);
 
 }
 
-*{
+* {
     margin: 0;
-    font-family: "inter" ;
+    font-family: 'Inter';
 }
-header{
-    background-color: tomato;
+
+.menu-principal>li a {
+    margin: 5px;
 }
-.cabecalho nav{
-background-color: rgb(240, 248, 255);
 
-display: flex;
-padding: 5px;
-
-justify-content: space-around ;
-
-height: 70px;
-align-items: center;
+.menu-principal>li a:hover {
+    transition: 1s;
+    background-color: rgb(126, 134, 134);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
-.navegacao h1{
+
+.cabecalho nav {
+    display: flex;
+    background-color: rgb(221, 221, 224);
+    padding: 5px;
+    justify-content: space-around;
+    /*Os itens são distribuídos uniformemente dentro do contêiner de alinhamento ao longo do eixo principal*/
+    height: 70px;
+    align-items: center;
+    /*funciona corretamente graças ao "display:flex"*/
+}
+
+.navegacao h1 {
+    font-weight: 900;
+    /*grossura da fonte*/
     font-size: 18px;
-    font-weight:900 ;
 }
-.navegacao>ul{
+
+.navegacao>ul {
+    /* " > " = usamos para nos referir a somente <ul>*/
     list-style: none;
-    display:flex;
+    /*none= nada*/
+    display: flex;
 }
-.navegacao>ul a{
+
+.navegacao>ul a {
     text-decoration: none;
     color: black;
     margin: 5px;
-    padding: 3px;
 }
-.navegacao> u i{
-    font-size: 20px;
+
+.navegacao>ul i {
     padding: 5px;
+    font-size: 16px;
 }
-.link-ativo i{
-    color: #f2f2f2;
-    background-color: black;
 
-    border-radius: 5px;
-    
-}
-.menu-principal>li-a{ 
-    margin: 3px;
-    padding: 5px ;
-}
-.menu-principal>li a:hover{
-    transition: 0.3;
+.link-ativo i {
+    color: white;
     background-color: black;
-    color: #f2f2f2;
     border-radius: 5px;
 }
-.banner{
+
+.banner {
     height: 100vh;
-    background-color: black;
-
+    background-color: blue;
 }
-.banner>img{
+
+.banner>img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.produtos{
-    height: 30vh;
+
+.produtos {
+    height: 100vh;
+}
+
+.produtos h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    gap: 10px;
+    padding: 20px 10% 5px 10%;
+}
+
+/*.grid-box :hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 1s, box-shadow 1s;
+}*/
+
+/*.box {
+    height: 280px;
+    width: 200px;
+    background-color: blueviolet;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}*/
+
+.produtos figure {
+    height: 380px;
+    width: 220px;
+    background-color: cornsilk;
+}
+
+.produtos figure>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
 
 }
-    .produtos>h1{
-        padding: 30px;
-        text-align: center;
-        font-size: 30px;
-     
-    }
-    .grid-box{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 300px);
-     
-        gap: 10px;
-    }
-    .box{
-        height: 280px;
-        width: 200px;
-     
-        background-color:aquamarine;
-        border-radius: 15px;
-     
-        text-align: center;
-        align-content: center;
-    }
+
+.produtos figure>figcaption>p {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+
+    line-clamp: 4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
